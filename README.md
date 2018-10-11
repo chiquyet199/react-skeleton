@@ -10,3 +10,4 @@ This is an react skeleton build from scratch with clear instruction for each com
 "babel-loader" Loader for webpack
 "webpack"
 "webpack-cli" Allow to run webpack command
+"webpack-dev-server" Provides a development server for your application
