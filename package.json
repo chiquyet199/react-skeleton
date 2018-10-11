@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/chiquyet199/react-skeleton.git",
   "author": "Quyết Nguyễn <quyet@lingio.co>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
 }
