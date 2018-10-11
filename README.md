@@ -11,3 +11,6 @@ This is an react skeleton build from scratch with clear instruction for each com
 "webpack"
 "webpack-cli" Allow to run webpack command
 "webpack-dev-server" Provides a development server for your application
+"css-loader"  Interprets @import and url() like import/require() and will resolve them
+"scss-loader" translate scss code to css code
+"style-loader" Adds CSS to the DOM by injecting a <style> tag

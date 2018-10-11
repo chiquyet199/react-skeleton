@@ -1,5 +1,20 @@
 const path = require("path");
 
+const jsLoaderRule = {
+  test: /.js$/,
+  exclude: /node_modules/,
+  use: ["babel-loader"]
+};
+
+const cssLoaderRule = {
+  test: /\.s?css$/,
+  use: [
+    { loader: "style-loader" },
+    { loader: "css-loader" },
+    { loader: "scss-loader" }
+  ]
+};
+
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
@@ -9,13 +24,7 @@ module.exports = {
   },
   devtool: "inline-source-map",
   module: {
-    rules: [
-      {
-        test: /.js$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"]
-      }
-    ]
+    rules: [jsLoaderRule, cssLoaderRule]
   },
   devServer: {
     contentBase: "./dist"
