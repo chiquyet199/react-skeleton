@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "start:dev": "webpack-dev-server --hot --inline"
+    "start:dev": "webpack-dev-server --hot --inline --open"
   },
   "dependencies": {
     "react": "^16.5.2",
