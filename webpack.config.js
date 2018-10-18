@@ -1,32 +1,32 @@
-const path = require("path");
+const path = require('path')
 
 const jsLoaderRule = {
   test: /.js$/,
   exclude: /node_modules/,
-  use: ["babel-loader"]
-};
+  use: ['babel-loader'],
+}
 
 const cssLoaderRule = {
   test: /\.s?css$/,
   use: [
-    { loader: "style-loader" },
-    { loader: "css-loader" },
-    { loader: "scss-loader" }
-  ]
-};
+    { loader: 'style-loader' },
+    { loader: 'css-loader' },
+    { loader: 'sass-loader' },
+  ],
+}
 
 module.exports = {
-  mode: "development",
-  entry: "./src/index.js",
+  mode: 'development',
+  entry: './src/index.js',
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist")
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map',
   module: {
-    rules: [jsLoaderRule, cssLoaderRule]
+    rules: [jsLoaderRule, cssLoaderRule],
   },
   devServer: {
-    contentBase: "./dist"
-  }
-};
+    contentBase: './dist',
+  },
+}
