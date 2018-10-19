@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const jsLoaderRule = {
   test: /.js$/,
@@ -14,7 +15,7 @@ const cssLoaderRule = {
       loader: 'css-loader',
       options: {
         modules: true,
-        importLoaders: 2,
+        importLoaders: 1,
         localIdentName: '[local]',
         sourceMap: true,
         minimize: true,
@@ -38,4 +39,9 @@ module.exports = {
   devServer: {
     contentBase: './dist',
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'dist/index.html',
+    }),
+  ],
 }
