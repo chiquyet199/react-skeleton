@@ -1,13 +1,8 @@
 import React from 'react'
-import { Footer, Header } from '../../components'
+import { Layout } from '../../components'
 
 export default class DashBoard extends React.Component {
   render() {
-    return (
-      <React.Fragment>
-        <Header />
-        <Footer />
-      </React.Fragment>
-    )
+    return <Layout>This is DashBoard</Layout>
   }
 }

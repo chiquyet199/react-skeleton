@@ -1,0 +1,16 @@
+.Layout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .Header {
+  }
+  main {
+    flex-grow: 1;
+    background: gray;
+  }
+  .Footer {
+  }
+}

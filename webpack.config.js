@@ -10,7 +10,16 @@ const cssLoaderRule = {
   test: /\.s?css$/,
   use: [
     { loader: 'style-loader' },
-    { loader: 'css-loader' },
+    {
+      loader: 'css-loader',
+      options: {
+        modules: true,
+        importLoaders: 2,
+        localIdentName: '[local]',
+        sourceMap: true,
+        minimize: true,
+      },
+    },
     { loader: 'sass-loader' },
   ],
 }
