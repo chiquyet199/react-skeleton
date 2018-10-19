@@ -29,8 +29,8 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[hash].js',
+    // path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'inline-source-map',
   module: {
@@ -38,6 +38,17 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist',
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'initial',
+        },
+      },
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
