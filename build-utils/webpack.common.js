@@ -8,6 +8,11 @@ const jsLoaderRule = {
   use: ['babel-loader'],
 }
 
+const fontsLoaderRule = {
+  test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+  loader: 'url-loader?limit=100000',
+}
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -15,7 +20,7 @@ module.exports = {
     publicPath: '/',
   },
   module: {
-    rules: [jsLoaderRule],
+    rules: [jsLoaderRule, fontsLoaderRule],
   },
   optimization: {
     splitChunks: {
