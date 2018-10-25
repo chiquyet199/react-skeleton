@@ -30,14 +30,14 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: '[name].[hash].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
   },
   devtool: 'inline-source-map',
   module: {
     rules: [jsLoaderRule, cssLoaderRule],
   },
   devServer: {
-    contentBase: './dist',
+    contentBase: './public',
   },
   optimization: {
     splitChunks: {
@@ -52,7 +52,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'dist/index.html',
+      template: 'public/index.html',
     }),
   ],
 }
