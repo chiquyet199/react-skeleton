@@ -1,11 +1,11 @@
 import React from 'react'
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
-import { DashBoard } from './screens'
-import { Loading } from './components'
+import { DashBoard } from 'screens'
+import { Loading } from 'components'
 import loadable from 'react-loadable'
 
 const AsyncAbout = loadable({
-  loader: () => import('./screens/About/About'),
+  loader: () => import('screens/About/About'),
   loading: Loading,
 })
 
