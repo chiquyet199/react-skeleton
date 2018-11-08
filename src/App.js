@@ -3,7 +3,6 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import { DashBoard } from './screens'
 import { Loading } from './components'
 import loadable from 'react-loadable'
-import './assets/css/common.scss'
 
 const AsyncAbout = loadable({
   loader: () => import('./screens/About/About'),
