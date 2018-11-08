@@ -1,7 +1,4 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+import './polyfill'
+import init from 'init'
 
-import './assets/css/common.scss'
-
-ReactDOM.render(<App />, document.getElementById('root'))
+init()
