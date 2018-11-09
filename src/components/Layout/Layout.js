@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Footer } from 'components'
+import { Header, Footer } from 'utils/importer/components'
 
 import './Layout.scss'
 

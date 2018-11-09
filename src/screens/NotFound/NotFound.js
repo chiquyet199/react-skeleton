@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Layout } from '../../components'
+import { Layout } from 'utils/importer/components'
 
 export default class NotFound extends React.Component {
   render() {

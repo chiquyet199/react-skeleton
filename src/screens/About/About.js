@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Layout } from 'components'
+import { Layout } from 'utils/importer/components'
 
 const logo = require('../../assets/images/pj_sga_logo.png')
 
