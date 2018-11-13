@@ -1,5 +1,5 @@
-import * as actions from 'store/actions'
-import * as selectors from 'store/selectors'
-import { store } from 'store/index'
+import actions from 'store/actions'
+import selectors from 'store/selectors'
+import { store } from 'store'
 
 export { actions, selectors, store }
